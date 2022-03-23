@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>slime検索</title>
+</head>
+<body>
+<img src="https://www.htmlcommentbox.com/storage/lg_15851726_slimesearch.png" title="slime検索ロゴ"><br>
+<p>
+<input type="text" id="nameText"size="40">
+<br><br><input type="button" value="検索"id="checkButton">
+</p>
+  <div class="wrap">
+    <label for="label1"><h2>▼　slime教のサイト</h2></label>
+    <input type="checkbox" id="label1" class="switch" />
+    <!-- ↓↓最初隠したいコンテンツ↓↓ -->
+    <div class="content">
+      <p>
+   <b>
+   <a href="https://uenofuuma.github.io/slimekyou/">slime教の入会用サイト</a><br>
+     <a href="https://uenofuuma.github.io/slimekyo-kousiki/">slime教の公式サイト</a><br>
+   <a href="https://uenofuuma.github.io/slime-/">slime掲示板　slime教が運営する掲示板サイト</a><br>
+   <a href="https://uenofuuma.github.io/slimequiz/">
+     slime教のクイズ</a><br>
+   <a href="https://uenofuuma.github.io/Styan/">Sちゃんねる　slime掲示板の２ちゃんねるバージョン</a><br>
+</b></p>
+    </div>
+<script>
+function butotnClick(){
+  window.open('https://www.google.com/search?q=' + nameText.value + '&safe=active&ssui=on');
+}
+
+let nameText = document.getElementById('nameText');
+let msg = document.getElementById('msg');
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+</script>
+<style>
+  body{text-align:center;}
+  input{font-size:20px;}
+  .wrap {
+  margin: 2em 0;
+  padding: 0;
+}
+
+.wrap label {
+  display: block;
+  color: #blue;
+  font-weight: bold;
+  background: silver;
+  cursor: pointer;
+}
+
+.wrap input[type="checkbox"] {
+  display: none;
+}
+
+.wrap .content {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  background:silver;
+}
+
+.switch:checked + .content {
+  height: auto;
+}
+</style>
+</body>
+</html>
