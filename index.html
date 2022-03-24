@@ -26,6 +26,14 @@
 </b></p>
     </div>
 <script>
+  var btn = document.getElementById('checkButton');
+
+    // Enterキー押下時、送信処理が実行する
+    window.document.onkeydown = function(event){
+        if (event.key === 'Enter') {
+            window.open('https://www.google.com/search?q=' + nameText.value + '&safe=active&ssui=on');
+        }
+    }
 function butotnClick(){
   window.open('https://www.google.com/search?q=' + nameText.value + '&safe=active&ssui=on');
 }
